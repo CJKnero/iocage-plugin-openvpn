@@ -135,8 +135,8 @@ Or in case of `nat_network_cidr` "172.16.0.0/16", then `nat_network` "172.16.0.0
 
 # Notes on success of installation of VPN server
 
-While developing this plugin, at first the installation would allways fail; when stopping my active/working OpenVPN jail, the installation would not fail anymore on the tun device `/dev/tun...`.
-So aparently this setup does not (really) allow multiple consumers of `/dev/tun0`, or at least this installation doesn't.
+While developing this plugin, at first the installation would always fail; when stopping my active/working OpenVPN jail, the installation would not fail anymore on the tun device `/dev/tun...`.
+So apparently this setup does not (really) allow multiple consumers of `/dev/tun0`, or at least this installation doesn't.
 Therefore removed the "fixed" tun allocation (renaming) of `tun0`.
 This may result in multiple device files in `/dev/tun..`, but that doesn't hurt and will be cleaned at first reboot. The positive effect is an OpenVPN jail which installation is more stable (I hope ;-).
 
